@@ -52,8 +52,8 @@ pipeline {
             steps {
                 sh '''
                     # Stop and remove old app container
-                    docker stop springboot-app || true
-                    docker rm springboot-app || true
+                    docker stop springboot-app-container || true
+                    docker rm springboot-app-container || true
 
                     # Run new container on same network
                     docker run -d \
