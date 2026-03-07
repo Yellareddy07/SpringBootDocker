@@ -75,7 +75,7 @@ pipeline {
         stage("Deploy"){
             steps{
                 sh'''
-                docker compose down
+                docker compose down --remove-orphans
                 docker compose up -d --build
                 '''
             }
