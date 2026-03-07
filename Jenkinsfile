@@ -15,6 +15,8 @@ pipeline {
             }
         }
 
+        //when you dont have yml file
+        /*
         stage('Docker Build') {
             steps {
                 sh 'docker build -t springboot-app .'
@@ -69,6 +71,15 @@ pipeline {
             }
         }
     }
+
+    */
+        //when you have yml file
+        stage("Deploy"){
+            steps{
+                docker-compose down
+                docker-compose up -d --build
+            }
+        }
 
     post {
         success {
