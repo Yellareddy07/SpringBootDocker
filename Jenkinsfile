@@ -59,7 +59,7 @@ pipeline {
                     docker run -d \
                       --name springboot-app-container \
                       --network springboot-network \
-                      -p 8080:8080 \
+                      -p 8081:8080 \
                       -e SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/SpringDocker \
                       -e SPRING_DATASOURCE_USERNAME=root \
                       -e SPRING_DATASOURCE_PASSWORD=Suyochi@123 \
