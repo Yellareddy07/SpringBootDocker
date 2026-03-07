@@ -40,6 +40,7 @@ pipeline {
                       --network springboot-network \
                       -e MYSQL_ROOT_PASSWORD=Suyochi@123 \
                       -e MYSQL_DATABASE=SpringDocker \
+                      -v mysql-data:/var/lib/mysql \
                       mysql:8
 
                     # Wait for MySQL to be ready
