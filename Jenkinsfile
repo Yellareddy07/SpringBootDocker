@@ -70,9 +70,7 @@ pipeline {
                 '''
             }
         }
-    }
-
-    */
+        */
         //when you have yml file
         stage("Deploy"){
             steps{
@@ -81,6 +79,8 @@ pipeline {
             }
         }
     }
+    
+
 
     post {
         success {
