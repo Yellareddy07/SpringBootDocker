@@ -80,6 +80,7 @@ pipeline {
                 docker-compose up -d --build
             }
         }
+    }
 
     post {
         success {
